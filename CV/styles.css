@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+section {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding-bottom: 0.5rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f4f4f4;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
