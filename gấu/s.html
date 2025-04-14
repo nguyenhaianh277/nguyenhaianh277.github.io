@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LYANH Bubble Text with Hearts</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      background: #ffe6f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+    .container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      font-size: 120px;
+      color: #ff66b2;
+      text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+      letter-spacing: 10px;
+      animation: bounce 2s infinite;
+      filter: drop-shadow(0 0 10px #ff99cc);
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    /* Trái tim */
+    .heart {
+      position: absolute;
+      color: #ff4d88;
+      font-size: 20px;
+      opacity: 0.8;
+      animation: float 6s infinite;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+    /* Random vị trí và thời gian */
+    .heart:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 5s; }
+    .heart:nth-child(2) { left: 25%; animation-delay: 1s; animation-duration: 6s; }
+    .heart:nth-child(3) { left: 40%; animation-delay: 2s; animation-duration: 4.5s; }
+    .heart:nth-child(4) { left: 60%; animation-delay: 1.5s; animation-duration: 5.5s; }
+    .heart:nth-child(5) { left: 80%; animation-delay: 0.5s; animation-duration: 6.5s; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>LYANH</h1>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+  </div>
+
+</body>
+</html>
