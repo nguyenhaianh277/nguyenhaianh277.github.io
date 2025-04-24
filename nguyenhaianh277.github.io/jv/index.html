@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables</title> 
+    </head>
+<body>
+    <h1>JavaScript Variables</h1>  
+    <form action = "">
+        <input type=" number" id="number 1" placeholder="Enter first number" required>
+        <input type="number" id="number 2" placeholder="Enter second number" required>
+        <br>
+        <button id="button1" onclick = "addNNumber();">Submit</button>
+    </form>
+    <script>
+        function addNumbers() {
+            var num1 = parseInt(document.getElementById("number 1").value);
+            var num2 = parseInt(document.getElementById("number 2").value);
+            var sum = num1 + num2;
+            alert("The sum is: " + sum);
+        } 
+    </script>
+</html>

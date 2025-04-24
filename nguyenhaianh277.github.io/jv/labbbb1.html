@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu nha hang</title>
+    <style>
+        /* Grid view for menu items */
+        .grid-view .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+            gap: 20px;
+        }
+
+        /* Menu item styling */
+        .menu-item {
+            background-color: #f9f9f9; /* Light gray background */
+            color: #333; /* Dark text color */
+            padding: 15px;
+            border: 1px solid #ddd; /* Light gray border */
+            border-radius: 10px; /* Rounded corners */
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+        }
+
+        /* Hover effect for menu items */
+        .menu-item:hover {
+            transform: translateY(-5px); /* Lift the item */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+            background-color: #e6f7ff; /* Light blue background on hover */
+        }
+
+        /* Menu item content */
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%; /* Circular images */
+            margin-bottom: 10px;
+        }
+
+        .menu-item h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+            color: #0073e6; /* Blue heading */
+        }
+
+        .menu-item p {
+            font-size: 14px;
+            color: #666; /* Gray description text */
+            margin: 5px 0;
+        }
+
+        .menu-item .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #28a745; /* Green price */
+        }
+
+        /* Button styling */
+        .toggle-btn {
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #0073e6; /* Blue button */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-btn:hover {
+            background-color: #005bb5; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Menu nha hang</h1>
+    <button class="toggle-btn" onclick="toggleView()">Chuyen doi che do hien thi</button>
+    <div class="category">
+        <h2>Khai vi</h2>
+        <ul class="menu-items">
+            <li class="menu-item">
+                <img src="https://via.placeholder.com/100" alt="Gio lua">
+                <h3>Gio lua</h3>
+                <p>Delicious Vietnamese pork sausage.</p>
+                <span class="price">$5</span>
+            </li>
+            <li class="menu-item">
+                <img src="https://via.placeholder.com/100" alt="Nem chua">
+                <h3>Nem chua</h3>
+                <p>Fermented pork with a tangy flavor.</p>
+                <span class="price">$4</span>
+            </li>
+            <li class="menu-item">
+                <img src="https://via.placeholder.com/100" alt="Cha lua">
+                <h3>Cha lua</h3>
+                <p>Traditional Vietnamese steamed pork roll.</p>
+                <span class="price">$6</span>
+            </li>
+            <li class="menu-item">
+                <img src="https://via.placeholder.com/100" alt="Xuc xich">
+                <h3>Xuc xich</h3>
+                <p>Grilled sausages with a smoky flavor.</p>
+                <span class="price">$7</span>
+            </li>
+        </ul>
+    </div>
+    <script>
+        function toggleView() {
+            const menuItems = document.querySelector('.menu-items'); // Select the menu-items element
+            menuItems.parentElement.classList.toggle('grid-view'); // Toggle the 'grid-view' class on the parent element
+        }
+    </script>
+</body>
+</html>

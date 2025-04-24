@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu nha hang </title>
+</head>
+<style>
+    .grid-view .menu-items {
+        display: grid;
+        grid-template-columns: repeat (2,1fr);
+        gap: 10px;
+    }
+    .grid-view .menu-item {
+        margin: 0;
+
+    }
+
+</style>
+<body>
+    <h1>Menu nha hang</h1>
+    <button class="toggle-btn"onclick="toggleView()">Chuyen doi che do hien thi </button>
+    <div class="category">
+        <h2>Khai vi </h2>
+        <ul class="menu-items">
+            <li class="menu-item">Gio lua</li>
+            <li class="menu-item">Nem chua</li>
+            <li class="menu-item">Cha lua</li>
+            <li class="menu-item">Xuc xich</li>
+            </ul>
+
+    </div>
+    <script>
+        function toggleView() {
+            const menuItems = document.querySelector('.menu-items'); // Select the menu-items element
+            menuItems.parentElement.classList.toggle('grid-view'); // Toggle the 'grid-view' class on the parent element
+        }
+    </script>
+</body>
+</html>
